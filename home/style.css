@@ -22,10 +22,44 @@ body {
     font-family: sans-serif;
 }
 
-.hometop .resp{
-    background-color: black;
+.topbar {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.topbar {
     display: none;
 }
+
+.topbar .options {
+    display: none;
+    position: absolute;
+    /* border: 2px solid yellow; */
+    border-radius: 5px;
+    top: 2.5rem;
+    left: 0;
+    width: 7%;
+    color: white;
+    background-color: #2e2e2e;
+    text-align: center;
+}
+
+.options h3 {
+    padding: .5rem;
+}
+
+.options h3:hover {
+    background-color: #b7eaaf;
+    color: black;
+}
+
+.topbar .left:hover .options {
+    display: block;
+}
+
+/* ********************************** */
 
 .hometop .header {
     /* border: 2px solid blue; */
@@ -229,19 +263,20 @@ body {
 /* *********************************** */
 
 @media only screen and (max-width: 500px) {
-    body{
+    body {
         width: 100vw;
-        /* height: 100vh; */
     }
-    .hometop{
+
+    .hometop {
         height: 50%;
     }
 
-    .hometop .resp{
-        display: block;
-        padding: 1rem;
+    .hometop .topbar {
         display: flex;
-        justify-content: space-between;
+    }
+
+    .topbar .options {
+        width: fit-content;
     }
 
     .hometop .header {
@@ -253,64 +288,73 @@ body {
         width: 50%;
     }
 
-    .hometop .middle img{
+    .hometop .middle img {
         display: none;
     }
 
-    .hometop .middle p{
+    .hometop .middle p {
         width: 70%;
     }
 
-    .hometop .footer{
+    .hometop .footer {
         width: 50%;
         margin: 0 6rem;
 
     }
 
-    .hometop .footer img{
+    .hometop .footer img {
         margin-bottom: 2rem;
     }
 
-    .homebottom h1{
+    .homebottom h1 {
         width: 60%;
         text-align: center;
         margin-left: 5rem;
-        
     }
 
-    .homebottom .topsection p{
+    .homebottom .topsection p {
         width: 80%;
     }
 
-    .homebottom .types{
+    .homebottom .types {
         flex-wrap: wrap;
     }
 }
 
+/* **************************************** */
+
 @media only screen and (max-width:390px) {
-    body{
+    body {
         width: 100vw;
     }
 
-    .hometop{
+    .hometop {
         height: 60%;
     }
 
-    .hometop .middle p{
+    .hometop .topbar {
+        display: flex;
+    }
+
+    .topbar .options {
+        width: fit-content;
+    }
+
+    .hometop .middle p {
         width: 70%;
     }
 
-    .hometop .footer{
+    .hometop .footer {
         width: 60%;
         margin: 0 4.5rem;
 
     }
 
-    .hometop .footer img{
+    .hometop .footer img {
         margin-bottom: 2rem;
     }
 
-    .homebottom .topsection p{
+    .homebottom .topsection p {
         width: 75%;
     }
 }
